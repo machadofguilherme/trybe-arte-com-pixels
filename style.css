@@ -4,19 +4,34 @@
   box-sizing: border-box;
 }
 
-#title {
-    margin: 30px 40px;
+#title,
+#pixel-board {
+  margin: 30px 40px;
 }
 
 #color-palette {
-    width: 600px;
-    height: 100px;
-    margin-left: 40px;
+  width: 600px;
+  height: 100px;
+  margin-left: 40px;
 }
 
 .color {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  width: 465px;
+  height: 465px;
+}
+
+.pixel {
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  background-color: white;
+  margin: 0.5px;
+  border: 1px solid black;
 }
