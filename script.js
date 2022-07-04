@@ -1,5 +1,12 @@
 const colorPallete = document.querySelectorAll('.color');
 const pixelBoard = document.querySelector('#pixel-board');
+const pixel = document.querySelectorAll('article.pixel');
+const colorBlack = document.querySelector('.color-black');
+const colorRed = document.querySelector('.color-red');
+const colorBlue = document.querySelector('.color-blue');
+const colorGreen = document.querySelector('.color-green');
+
+let selectedColor = undefined;
 
 function setPaletteColor() {
   colorPallete[0].style.backgroundColor = 'black';
@@ -15,6 +22,66 @@ function createPixels() {
     pixelBoard.appendChild(pixel);
   }
 }
+
+colorBlack.addEventListener('click', () => {
+  if (
+    colorBlue.className === 'selected' &&
+    colorRed.className === 'selected' &&
+    colorGreen.className === 'selected'
+  ) {
+    colorBlue.classList.remove('selected');
+    colorRed.classList.remove('selected');
+    colorGreen.classList.remove('selected');
+  } else {
+    colorBlack.classList.add('selected');
+  }
+  selectedColor = getComputedStyle(colorPallete[0]).backgroundColor;
+});
+
+  colorRed.addEventListener('click', () => {
+    if (
+      colorBlack.className === 'selected' &&
+      colorBlue.className === 'selected' &&
+      colorGreen.className === 'selected'
+    ) {
+      colorBlack.classList.remove('selected');
+      colorBlue.classList.remove('selected');
+      colorGreen.classList.remove('selected');
+    } else {
+      colorRed.classList.add('selected');
+    }
+  selectedColor = getComputedStyle(colorPallete[1]).backgroundColor;
+});
+
+colorBlue.addEventListener('click', () => {
+    if (
+      colorBlack.className === 'selected' &&
+      colorRed.className === 'selected' &&
+      colorGreen.className === 'selected'
+    ) {
+      colorBlack.classList.remove('selected');
+      colorRed.classList.remove('selected');
+      colorGreen.classList.remove('selected');
+    } else {
+      colorBlue.classList.add('selected');
+    }
+  selectedColor = getComputedStyle(colorPallete[2]).backgroundColor;
+});
+
+colorGreen.addEventListener('click', () => {
+    if (
+      colorBlack.className === 'selected' &&
+      colorRed.className === 'selected' &&
+      colorBlue.className === 'selected'
+    ) {
+      colorBlack.classList.remove('selected');
+      colorRed.classList.remove('selected');
+      colorBlue.classList.remove('selected');
+    } else {
+      colorGreen.classList.add('selected');
+    }
+  selectedColor = getComputedStyle(colorPallete[3]).backgroundColor;
+});
 
 window.onload = function () {
   setPaletteColor();
