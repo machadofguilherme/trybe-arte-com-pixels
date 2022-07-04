@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#title {
+    margin: 30px 40px;
+}
+
+#color-palette {
+    width: 600px;
+    height: 100px;
+    margin-left: 40px;
+}
+
+.color {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
