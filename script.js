@@ -25,8 +25,8 @@ function createPixels() {
 
 colorBlack.addEventListener('click', () => {
   if (
-    colorBlue.className.includes('selected') &&
-    colorRed.className.includes('selected') &&
+    colorBlue.className.includes('selected') ||
+    colorRed.className.includes('selected') ||
     colorGreen.className.includes('selected')
   ) {
     colorBlue.classList.remove('selected');
@@ -40,8 +40,8 @@ colorBlack.addEventListener('click', () => {
 
   colorRed.addEventListener('click', () => {
     if (
-      colorBlack.className.includes('selected') &&
-      colorBlue.className.includes('selected') &&
+      colorBlack.className.includes('selected') ||
+      colorBlue.className.includes('selected') ||
       colorGreen.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
@@ -56,8 +56,8 @@ colorBlack.addEventListener('click', () => {
 
 colorBlue.addEventListener('click', () => {
     if (
-      colorBlack.className.includes('selected') &&
-      colorRed.className.includes('selected') &&
+      colorBlack.className.includes('selected') ||
+      colorRed.className.includes('selected') ||
       colorGreen.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
@@ -72,8 +72,8 @@ colorBlue.addEventListener('click', () => {
 
 colorGreen.addEventListener('click', () => {
     if (
-      colorBlack.className.includes('selected') &&
-      colorRed.className.includes('selected') &&
+      colorBlack.className.includes('selected') ||
+      colorRed.className.includes('selected') ||
       colorBlue.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
