@@ -4,15 +4,20 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 #title,
-#pixel-board {
+#pixel-board,
+#color-palette,
+#clear-board {
   margin: 20px 40px;
 }
 
 #color-palette {
   width: 600px;
   height: 60px;
-  margin-left: 40px;
 }
 
 .color {
@@ -31,6 +36,11 @@
   height: 40px;
   width: 40px;
   background-color: white;
-  margin: 0.5px;
   border: 1px solid black;
+}
+
+#clear-board {
+    outline: none;
+    padding: 10px 70px;
+    margin-left: 40px;
 }
