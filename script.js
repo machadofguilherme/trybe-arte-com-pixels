@@ -25,62 +25,65 @@ function createPixels() {
 
 colorBlack.addEventListener('click', () => {
   if (
-    colorBlue.className === 'selected' &&
-    colorRed.className === 'selected' &&
-    colorGreen.className === 'selected'
+    colorBlue.className.includes('selected') &&
+    colorRed.className.includes('selected') &&
+    colorGreen.className.includes('selected')
   ) {
     colorBlue.classList.remove('selected');
     colorRed.classList.remove('selected');
     colorGreen.classList.remove('selected');
-  } else {
-    colorBlack.classList.add('selected');
   }
+    colorBlack.classList.add('selected');
   selectedColor = getComputedStyle(colorPallete[0]).backgroundColor;
+  console.log(selectedColor);
 });
 
   colorRed.addEventListener('click', () => {
     if (
-      colorBlack.className === 'selected' &&
-      colorBlue.className === 'selected' &&
-      colorGreen.className === 'selected'
+      colorBlack.className.includes('selected') &&
+      colorBlue.className.includes('selected') &&
+      colorGreen.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
       colorBlue.classList.remove('selected');
       colorGreen.classList.remove('selected');
-    } else {
-      colorRed.classList.add('selected');
     }
+      colorRed.classList.add('selected');
   selectedColor = getComputedStyle(colorPallete[1]).backgroundColor;
+  console.log(selectedColor);
+
 });
 
 colorBlue.addEventListener('click', () => {
     if (
-      colorBlack.className === 'selected' &&
-      colorRed.className === 'selected' &&
-      colorGreen.className === 'selected'
+      colorBlack.className.includes('selected') &&
+      colorRed.className.includes('selected') &&
+      colorGreen.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
       colorRed.classList.remove('selected');
       colorGreen.classList.remove('selected');
-    } else {
-      colorBlue.classList.add('selected');
     }
+      colorBlue.classList.add('selected');
   selectedColor = getComputedStyle(colorPallete[2]).backgroundColor;
+  console.log(selectedColor);
+
 });
 
 colorGreen.addEventListener('click', () => {
     if (
-      colorBlack.className === 'selected' &&
-      colorRed.className === 'selected' &&
-      colorBlue.className === 'selected'
+      colorBlack.className.includes('selected') &&
+      colorRed.className.includes('selected') &&
+      colorBlue.className.includes('selected')
     ) {
       colorBlack.classList.remove('selected');
       colorRed.classList.remove('selected');
       colorBlue.classList.remove('selected');
-    } else {
-      colorGreen.classList.add('selected');
     }
+      colorGreen.classList.add('selected');
   selectedColor = getComputedStyle(colorPallete[3]).backgroundColor;
+  console.log(selectedColor);
+
 });
 
 window.onload = function () {
