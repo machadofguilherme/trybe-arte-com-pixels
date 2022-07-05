@@ -115,7 +115,7 @@ clear.addEventListener('click', () => {
   }
 });
 
-window.onload = function () {
+window.onload = function() {
   setPaletteColor();
   createPixels();
   paintBlack();
